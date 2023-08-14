@@ -38,34 +38,29 @@
     </header>
 
     <main class="page__main">
-      <form class="form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+      <section class="form">
         <div class="container">
-          <div class="form__wrapper">
+          <div class="form__header">
             <h1 class="form__title title">Подбор программы</h1>
             <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-
+          </div>
+          <form class="form__data" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
             <div class="form__inner">
               <fieldset class="form__section">
                 <h2 class="visually-hidden">Личные данные кота</h2>
                 <ul class="form__field-list">
-                  <li class="form__field-item">
-                    <div class="form__field field">
-                      <label class="field__label" for="cat-name">Имя:*</label>
-                      <input class="field__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
-                    </div>
+                  <li class="form__field-item field">
+                    <label class="field__label" for="cat-name">Имя:*</label>
+                    <input class="field__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
                   </li>
-                  <li class="form__field-item">
-                    <div class="form__field field">
-                      <label class="field__label" for="cat-weight">Вес (кг):*</label>
-                      <input class="field__input" type="number" name="cat-weight" id="cat-weight" placeholder="7" min="0" step="0.5"
-                        required>
-                    </div>
+                  <li class="form__field-item field">
+                    <label class="field__label" for="cat-weight">Вес (кг):*</label>
+                    <input class="field__input" type="number" name="cat-weight" id="cat-weight" placeholder="7" min="0" step="0.5"
+                      required>
                   </li>
-                  <li class="form__field-item">
-                    <div class="form__field field">
-                      <label class="field__label" for="cat-age">Возраст (лет):</label>
-                      <input class="field__input" type="number" name="cat-age" id="cat-age" placeholder="7" min="0" step="0.5">
-                    </div>
+                  <li class="form__field-item field">
+                    <label class="field__label" for="cat-age">Возраст (лет):</label>
+                    <input class="field__input" type="number" name="cat-age" id="cat-age" placeholder="7" min="0" step="0.5">
                   </li>
                 </ul>
               </fieldset>
@@ -98,32 +93,24 @@
             <fieldset class="form__section">
               <h2 class="form__subtitle subtitle">Контактные данные (владельца кота)</h2>
               <ul class="form__field-list">
-                <li class="form__field-item">
-                  <div class="form__field field field--icon field--icon-email">
-                    <label class="field__label" for="owner-email">E-mail:*</label>
-                    <input class="field__input" type="email" name="owner-email" id="owner-email" placeholder="кuklachev@gmail.com"
-                      required>
-                  </div>
+                <li class="form__field-item field field--icon">
+                  <label class="field__label" for="owner-email">E-mail:*</label>
+                  <input class="field__input" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com"
+                    required>
                 </li>
-                <li class="form__field-item">
-                  <div class="form__field field field--icon field--icon-tel">
-                    <label class="field__label" for="owner-tel">Телефон:*</label>
-                    <input class="field__input" type="tel" name="owner-tel" id="owner-tel" placeholder="8 (960) 900-60-90" required>
-                  </div>
+                <li class="form__field-item field field--icon">
+                  <label class="field__label" for="owner-tel">Телефон:*</label>
+                  <input class="field__input" type="tel" name="owner-tel" id="owner-tel" placeholder="8 (960) 900-60-90" required>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="form__section">
               <h2 class="form__subtitle subtitle">Комментарий</h2>
-              <div class="form__textarea field field--textarea">
-                <label for="comment">
-                  <span class="visually-hidden">Расскажите обо всех повадках кота</span>
-                </label>
-                <textarea class="field__input field__input--textarea" name="owner-comment" id="owner-comment"
-                  placeholder="Расскажите обо всех повадках кота">
-                </textarea>
-              </div>
+              <label class="visually-hidden" for="owner-comment">Расскажите обо всех повадках кота</label>
+              <textarea class="form__textarea textarea" name="owner-comment" id="owner-comment"
+                placeholder="Расскажите обо всех повадках кота">
+              </textarea>
             </fieldset>
 
             <fieldset class="form__section">
@@ -157,13 +144,13 @@
               </ul>
             </fieldset>
 
-            <div class="form__foot">
+            <div class="form__bottom">
               <button class="form__button button button--primary" type="submit">Отправить заявку</button>
               <span class="form__footnote">* — Обязательные поля</span>
             </div>
-          </div>
+          </form>
         </div>
-      </form>
+      </section>
 
       <section class="location location--inner-page">
         <h2 class="visually-hidden">Наш адрес</h2>
