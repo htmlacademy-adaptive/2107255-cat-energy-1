@@ -1,0 +1,18 @@
+@use "./helpers/helpers.scss" as *;
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 11px 22px 9px 22px;
+
+  @include font-accent-uppercase(16px, 20px);
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+
+  &--primary {
+    color: $white;
+    background-color: $bg-green;
+  }
+}

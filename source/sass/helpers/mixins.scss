@@ -1,0 +1,28 @@
+@use "./variables.scss" as *;
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-normalize {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@mixin font-accent-uppercase($font-size: 14px, $line-height: 18px) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-accent;
+  text-transform: uppercase;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

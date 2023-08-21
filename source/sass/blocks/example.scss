@@ -1,0 +1,56 @@
+@use "./helpers/helpers.scss" as *;
+
+.example {
+  background-color: $bg-grey;
+}
+
+.example__wrapper {
+  display: grid;
+  gap: 20px;
+  padding: 25px 0 40px 0;
+}
+
+.example__title {
+  margin-bottom: 40px;
+}
+
+.example__description {
+  margin: 0 0 20px 0;
+}
+
+.example__details {
+  display: grid;
+  gap: 20px;
+}
+
+.example__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin: 0;
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.example__detail-name {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__detail-value {
+  order: -1;
+  margin: 0;
+  line-height: 24px;
+}
+
+.example__costs {
+  margin: 0;
+
+  @include font-accent-uppercase($line-height: 20px);
+  text-align: center;
+  color: $black;
+}

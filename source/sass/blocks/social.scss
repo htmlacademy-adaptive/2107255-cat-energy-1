@@ -1,0 +1,5 @@
+@use "./helpers/helpers.scss" as *;
+
+.social {
+  @include list-reset;
+}

@@ -1,0 +1,15 @@
+@use "./helpers/helpers.scss" as *;
+
+.slider {
+  position: relative;
+}
+
+.slider__item {
+  display: flex;
+}
+
+.slider__control {
+  position: absolute;
+
+  @include button-normalize;
+}

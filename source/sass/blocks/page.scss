@@ -1,0 +1,20 @@
+@use "./helpers/helpers.scss" as *;
+
+.page {
+  width: 320px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-base;
+  color: $dark-grey;
+  background-color: $white;
+}
+
+.page__promo,
+.page__categories {
+  margin-bottom: 20px;
+}
+
+.page__features {
+  margin-bottom: 49px;
+}

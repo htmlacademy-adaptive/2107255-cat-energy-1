@@ -1,0 +1,13 @@
+@use "./helpers/helpers.scss" as *;
+
+.subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  font-family: $font-accent;
+  color: $black;
+
+  &--accent {
+    text-transform: uppercase;
+  }
+}

@@ -7,6 +7,7 @@
     <title>Главная | Кэт Энерджи | HTML Academy</title>
     <meta name="description"
       content="Интернет-магазин фитнес еды для котиков. Личный проект на курсе «HTML и CSS. Адаптивная вёрстка и автоматизация».">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
 
   <body class="page">
@@ -21,15 +22,15 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <nav class="header__navigation">
-            <ul class="site-navigation">
-              <li class="site-navigation__item">
-                <span class="site-navigation__link">Главная</span>
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <span class="site-nav__link">Главная</span>
               </li>
-              <li class="site-navigation__item">
-                <a class="site-navigation__link" href="./catalog.html">Каталог продукции</a>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./catalog.html">Каталог продукции</a>
               </li>
-              <li class="site-navigation__item">
-                <a class="site-navigation__link" href="./form.html">Подбор программы</a>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./form.html">Подбор программы</a>
               </li>
             </ul>
           </nav>
@@ -38,12 +39,12 @@
     </header>
 
     <main class="page__main">
-      <section class="promo">
+      <section class="page__promo promo">
         <div class="container">
           <div class="promo__wrapper">
             <h1 class="promo__title title">Функциональное питание для котов</h1>
             <p class="promo__lead">Занялся собой? Займись котом!</p>
-            <div class="promo__image-wrapper">
+            <div class="promo__img-wrapper">
               <img class="promo__image" src="./img/promo-can-mobile.png" width="280" height="270"
                 alt="Красивая баночка с питанием Cat Energy Pro Курица.">
             </div>
@@ -52,12 +53,12 @@
         </div>
       </section>
 
-      <section class="categories">
+      <section class="page__categories categories">
         <div class="container">
           <h2 class="visually-hidden">Программы питания</h2>
           <ul class="categories__list">
             <li class="categories__item">
-              <h3 class="categories__title">Похудение</h3>
+              <h3 class="categories__subtitle subtitle subtitle--accent">Похудение</h3>
               <p class="categories__description">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
                 Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
@@ -65,7 +66,7 @@
               <a class="categories__link" href="#">Каталог Slim</a>
             </li>
             <li class="categories__item">
-              <h3 class="categories__title">Набор массы</h3>
+              <h3 class="categories__subtitle subtitle subtitle--accent">Набор массы</h3>
               <p class="categories__description">
                 Заработать авторитет среди дворовых котов и даже собак?
                 Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -76,7 +77,7 @@
         </div>
       </section>
 
-      <section class="features">
+      <section class="page__features features">
         <div class="container">
           <h2 class="features__title title">Как это работает</h2>
           <ol class="features__list">
@@ -118,11 +119,11 @@
                 <dl class="example__list">
                   <div class="example__item">
                     <dt class="example__detail-name">снижение веса</dt>
-                    <dd class="example__detail-value">5 кг</dd>
+                    <dd class="example__detail-value subtitle subtitle--accent">5 кг</dd>
                   </div>
                   <div class="example__item">
                     <dt class="example__detail-name">затрачено времени</dt>
-                    <dd class="example__detail-value">60 дней</dd>
+                    <dd class="example__detail-value subtitle subtitle--accent">60 дней</dd>
                   </div>
                 </dl>
                 <p class="example__costs">
@@ -153,7 +154,7 @@
       <section class="location">
         <h2 class="visually-hidden">Наш адрес</h2>
         <div class="location__contacts contacts">
-          <p class="contacts__lead">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__lead">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <address class="contacts__address">
             <span class="contacts__address-text">ул. Большая Конюшенная, д. 19/8</span>
             <span class="contacts__city">Санкт-Петербург</span>
