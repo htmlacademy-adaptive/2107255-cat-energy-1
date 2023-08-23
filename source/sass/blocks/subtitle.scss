@@ -1,9 +1,10 @@
-@use "./helpers/helpers.scss" as *;
+@use "../helpers/helpers.scss" as *;
 
 .subtitle {
+  margin: 0;
   font-weight: 400;
   font-size: 24px;
-  line-height: 26px;
+  line-height: 24px;
   font-family: $font-accent;
   color: $black;
 

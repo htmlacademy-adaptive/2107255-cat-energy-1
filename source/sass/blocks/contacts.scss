@@ -1,14 +1,14 @@
-@use "./helpers/helpers.scss" as *;
+@use "../helpers/helpers.scss" as *;
 
 .contacts {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 26px 20px;
-  background-color: $white;
 }
 
 .contacts__lead {
   margin: 0;
+  padding-right: 15px;
 
   @include font-accent-uppercase(16px, 20px);
   color: $almost-black;

@@ -1,11 +1,8 @@
-@use "./helpers/helpers.scss" as *;
+@use "../helpers/helpers.scss" as *;
 
 .site-nav {
   @include list-reset;
   @include font-accent-uppercase(20px, 20px);
-}
-
-.site-nav__item {
   text-align: center;
 }
 

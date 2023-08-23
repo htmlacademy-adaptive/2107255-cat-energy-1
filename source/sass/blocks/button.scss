@@ -1,10 +1,10 @@
-@use "./helpers/helpers.scss" as *;
+@use "../helpers/helpers.scss" as *;
 
 .button {
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 11px 22px 9px 22px;
+  padding: 10px 20px;
 
   @include font-accent-uppercase(16px, 20px);
   text-align: center;
@@ -14,5 +14,10 @@
   &--primary {
     color: $white;
     background-color: $bg-green;
+  }
+
+  &--secondary {
+    color: $dark-grey;
+    background-color: $bg-light-grey;
   }
 }

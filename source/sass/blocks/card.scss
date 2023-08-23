@@ -1,0 +1,63 @@
+@use "../helpers/helpers.scss" as *;
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px 0;
+  padding: 20px 0 25px 0;
+
+  &--show-more {
+    grid-template-columns: 1fr;
+    row-gap: 21px;
+    padding-top: 25px;
+  }
+}
+
+.card__link-img {
+  @include flex-center;
+}
+
+.card__link-title {
+  display: flex;
+  width: 76px;
+  margin-bottom: 15px;
+}
+
+.card__title {
+  margin: 0;
+  font-weight: 400;
+
+  @include font-accent-uppercase(16px, 20px);
+  color: $very-dark-grey;
+}
+
+.card__show-more {
+  text-align: center;
+
+  .card__title {
+    margin-bottom: 8px;
+    color: $almost-black;
+  }
+}
+
+.card__properties,
+.card__description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card__property {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.card__property-value {
+  margin: 0;
+  text-align: right;
+}
+
+.card__button {
+  grid-column: 1 / -1;
+}

@@ -1,4 +1,4 @@
-@use "./helpers/helpers.scss" as *;
+@use "../helpers/helpers.scss" as *;
 
 .example {
   background-color: $bg-grey;
@@ -44,7 +44,6 @@
 .example__detail-value {
   order: -1;
   margin: 0;
-  line-height: 24px;
 }
 
 .example__costs {

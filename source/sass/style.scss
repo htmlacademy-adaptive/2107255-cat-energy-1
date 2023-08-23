@@ -15,6 +15,7 @@
 @use "./blocks/title.scss";
 @use "./blocks/subtitle.scss";
 @use "./blocks/button.scss";
+
 // Promo
 @use "./blocks/promo.scss";
 // Categories
@@ -28,6 +29,12 @@
 @use "./blocks/location.scss";
 @use "./blocks/contacts.scss";
 @use "./blocks/map.scss";
+
+// Catalog
+@use "./blocks/catalog.scss";
+@use "./blocks/card.scss";
+// Additional
+@use "./blocks/additional.scss";
 
 // --- Footer ---
 @use "./blocks/footer.scss";
