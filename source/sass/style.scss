@@ -1,42 +1,44 @@
-// ----- Project -----
-@use "./helpers/fonts.scss";
-@use "./helpers/global.scss";
-@use "./helpers/utility.scss";
+// ------- Common -------
+@use "./common/fonts.scss";
+@use "./common/global.scss";
+@use "./common/visually-hidden.scss";
+@use "./common/container.scss";
 
-// ----- Blocks -----
+// ------- Blocks -------
 @use "./blocks/page.scss";
-@use "./blocks/container.scss";
-
-// --- Header ---
-@use "./blocks/header.scss";
-@use "./blocks/site-nav.scss";
-
-// --- Main ---
 @use "./blocks/title.scss";
 @use "./blocks/subtitle.scss";
 @use "./blocks/button.scss";
 
-// Promo
-@use "./blocks/promo.scss";
-// Categories
-@use "./blocks/categories.scss";
-// Features
-@use "./blocks/features.scss";
-// Example
-@use "./blocks/example.scss";
-@use "./blocks/slider.scss";
+// ----- Header -----
+@use "./blocks/index/header.scss";
+@use "./blocks/index/site-nav.scss";
+
+// ----- Main -----
 // Location
-@use "./blocks/location.scss";
-@use "./blocks/contacts.scss";
-@use "./blocks/map.scss";
+@use "./blocks/index/location.scss";
+@use "./blocks/index/contacts.scss";
+@use "./blocks/index/map.scss";
 
+// --- Index ---
+// Promo
+@use "./blocks/index/promo.scss";
+// Categories
+@use "./blocks/index/categories.scss";
+// Features
+@use "./blocks/index/features.scss";
+// Example
+@use "./blocks/index/example.scss";
+@use "./blocks/index/slider.scss";
+
+// --- Catalog ---
 // Catalog
-@use "./blocks/catalog.scss";
-@use "./blocks/card.scss";
+@use "./blocks/catalog/catalog.scss";
+@use "./blocks/catalog/card.scss";
 // Additional
-@use "./blocks/additional.scss";
+@use "./blocks/catalog/additional.scss";
 
-// --- Footer ---
-@use "./blocks/footer.scss";
-@use "./blocks/social.scss";
-@use "./blocks/copyright.scss";
+// ----- Footer -----
+@use "./blocks/index/footer.scss";
+@use "./blocks/index/social.scss";
+@use "./blocks/index/copyright.scss";

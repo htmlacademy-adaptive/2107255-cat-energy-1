@@ -14,9 +14,9 @@
   cursor: pointer;
 }
 
-@mixin font-accent-uppercase($font-size: 14px, $line-height: 18px) {
-  font-size: $font-size;
-  line-height: $line-height;
+@mixin font-accent-uppercase($size: 14px, $line: 18px) {
+  font-size: $size;
+  line-height: $line;
   font-family: $font-accent;
   text-transform: uppercase;
 }

@@ -1,5 +1,11 @@
+@use "../abstracts/abstracts.scss" as *;
+
 .page {
-  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-base;
+  color: $dark-grey;
+  background-color: $white;
 }
 
 .page__promo,

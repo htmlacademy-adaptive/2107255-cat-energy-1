@@ -1,4 +1,4 @@
-@use "../helpers/helpers.scss" as *;
+@use "../../abstracts/abstracts.scss" as *;
 
 .example {
   background-color: $bg-grey;
@@ -49,7 +49,7 @@
 .example__costs {
   margin: 0;
 
-  @include font-accent-uppercase($line-height: 20px);
+  @include font-accent-uppercase($line: 20px);
   text-align: center;
   color: $black;
 }
