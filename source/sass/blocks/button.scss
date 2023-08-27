@@ -1,0 +1,22 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+
+  @include font-accent-uppercase(16px, 20px);
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+
+  &--primary {
+    color: $white;
+    background-color: $bg-green;
+  }
+
+  &--secondary {
+    color: $dark-grey;
+    background-color: $bg-light-grey;
+  }
+}

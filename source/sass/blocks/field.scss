@@ -1,0 +1,42 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  @include font-accent-uppercase(16px);
+}
+
+.field__label {
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+
+.field__input {
+  flex-grow: 1;
+  width: 60%;
+  min-height: 45px;
+  padding: 13px 14px 12px 14px;
+  font: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background-color: $bg-transparent;
+  border: 1px solid $border-light-grey;
+  appearance: textfield;
+
+  &::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &--icon {
+    padding-right: 45px;
+    border-color: $border-grey;
+  }
+}

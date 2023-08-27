@@ -1,0 +1,97 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.form {
+  padding: 27px 0 32px 0;
+}
+
+.form__header {
+  width: 260px;
+  margin-bottom: 39px;
+}
+
+.form__title {
+  margin-bottom: 37px;
+}
+
+.form__description {
+  margin: 0;
+
+  @include font-accent-uppercase;
+  color: $black;
+}
+
+.form__inner {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.form__section {
+  @include fieldset-reset;
+
+  &--contacts {
+    margin-bottom: 24px;
+  }
+
+  &--comment {
+    margin-bottom: 23px;
+  }
+
+  &--additional {
+    margin-bottom: 34px;
+  }
+}
+
+.form__subtitle {
+  line-height: 26px;
+
+  &--contacts {
+    margin-bottom: 35px;
+  }
+
+  &--comment {
+    margin-bottom: 38px;
+  }
+
+  &--additional {
+    margin-bottom: 34px;
+  }
+}
+
+.form__field-list {
+  display: grid;
+  gap: 14px;
+
+  @include list-reset;
+}
+
+.form__radio-list {
+  display: grid;
+  gap: 13px;
+
+  @include list-reset;
+  padding: 22px 0 19px 0;
+}
+
+.form__checkbox-list {
+  display: grid;
+  gap: 12px;
+
+  @include list-reset;
+}
+
+.form__textarea {
+  width: 100%;
+  min-height: 150px;
+}
+
+.form__bottom {
+  display: grid;
+  gap: 21px;
+}
+
+.form__footnote {
+  line-height: 16px;
+  text-align: center;
+  color: $black;
+}

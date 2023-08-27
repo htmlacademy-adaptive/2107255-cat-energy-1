@@ -1,0 +1,17 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.location {
+  &--inner-page {
+    background-color: $bg-light-grey;
+  }
+}
+
+.location__contacts {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.location__map {
+  height: 362px;
+}

@@ -1,0 +1,39 @@
+@use "./variables.scss" as *;
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin fieldset-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@mixin button-normalize {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@mixin font-base($size, $line) {
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin font-accent-uppercase($size: 14px, $line: 18px) {
+  font-size: $size;
+  line-height: $line;
+  font-family: $font-accent;
+  text-transform: uppercase;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

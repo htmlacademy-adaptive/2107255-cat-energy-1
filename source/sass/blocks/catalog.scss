@@ -1,0 +1,13 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.catalog {
+  padding-top: 27px;
+}
+
+.catalog__title {
+  margin-bottom: 41px;
+}
+
+.catalog__list {
+  @include list-reset;
+}

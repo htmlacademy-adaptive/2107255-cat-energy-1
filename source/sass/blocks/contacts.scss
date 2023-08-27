@@ -1,0 +1,21 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  justify-content: space-between;
+  padding: 26px 20px;
+}
+
+.contacts__lead {
+  margin: 0 15px 0 0;
+
+  @include font-accent-uppercase(16px, 20px);
+  color: $almost-black;
+}
+
+.contacts__address {
+  display: grid;
+  font-style: normal;
+  line-height: 20px;
+}
