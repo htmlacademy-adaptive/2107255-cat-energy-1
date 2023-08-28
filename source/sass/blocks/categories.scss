@@ -1,0 +1,30 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.categories__list {
+  display: grid;
+  gap: 20px;
+
+  @include list-reset;
+}
+
+.categories__item {
+  padding: 30px 20px 11px 20px;
+  background-color: $bg-light-grey;
+}
+
+.categories__subtitle {
+  margin: 0 0 29px 70px;
+  line-height: 37px;
+}
+
+.categories__description {
+  margin: 0 0 31px 0;
+}
+
+.categories__link {
+  display: inline-flex;
+  padding: 9px 0;
+
+  @include font-accent-uppercase(16px, 20px);
+  color: $black;
+}

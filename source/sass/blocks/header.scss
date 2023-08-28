@@ -1,0 +1,22 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.header__wrapper {
+  position: relative;
+  padding-top: 13px;
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.header__logo-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__toggle {
+  @include button-normalize;
+}

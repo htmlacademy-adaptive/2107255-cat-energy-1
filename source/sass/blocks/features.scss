@@ -1,0 +1,16 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.features__title {
+  margin-bottom: 40px;
+}
+
+.features__list {
+  display: grid;
+  gap: 20px;
+
+  @include list-reset;
+}
+
+.features__description {
+  margin: 0;
+}

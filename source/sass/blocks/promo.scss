@@ -1,0 +1,28 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.promo {
+  color: $white;
+  background: linear-gradient(rgba($bg-green, 0.85) 302px, $bg-transparent 302px);
+}
+
+.promo__wrapper {
+  padding-top: 27px;
+  text-align: center;
+}
+
+.promo__title {
+  margin-bottom: 25px;
+  line-height: 36px;
+  color: inherit;
+}
+
+.promo__lead {
+  margin: 0 0 29px 0;
+
+  @include font-accent-uppercase($line: 14px);
+}
+
+.promo__img-wrapper {
+  display: flex;
+  margin-bottom: 3px;
+}

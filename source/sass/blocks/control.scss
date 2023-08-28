@@ -1,0 +1,14 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.control {
+  display: inline-flex;
+  gap: 15px;
+  vertical-align: top;
+}
+
+.control__label {
+  margin-top: 6px;
+
+  @include font-accent-uppercase(16px);
+  cursor: pointer;
+}

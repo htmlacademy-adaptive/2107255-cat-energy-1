@@ -1,0 +1,75 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.additional {
+  padding: 25px 0 35px 0;
+}
+
+.additional__title {
+  margin-bottom: 36px;
+}
+
+.additional__wrapper {
+  display: grid;
+  gap: 35px;
+}
+
+.additional__list {
+  @include list-reset;
+}
+
+.additional__item {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 15px;
+  padding: 13px 0 19px 0;
+  line-height: 14px;
+}
+
+.additional__subtitle {
+  margin: 0 0 -2px 0;
+  font-weight: 400;
+
+  @include font-accent-uppercase(16px, 16px);
+  color: $very-dark-grey;
+}
+
+.additional__weight {
+  grid-column: 1 / 2;
+}
+
+.additional__price {
+  text-align: right;
+}
+
+.additional__button {
+  grid-column: 1 / -1;
+}
+
+.additional__gift {
+  position: relative;
+  z-index: 1;
+  padding: 59px 59px 43px 56px;
+  text-align: center;
+  color: $white;
+  background-image: url("../img/background/additional-gift-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba($bg-green, 0.85);
+  }
+}
+
+.additional__gift-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+}

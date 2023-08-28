@@ -1,0 +1,16 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.textarea {
+  padding: 13px 14px;
+
+  @include font-accent-uppercase(16px);
+  color: inherit;
+  background-color: $bg-transparent;
+  border: 1px solid $border-light-grey;
+  resize: none;
+
+  &::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+}

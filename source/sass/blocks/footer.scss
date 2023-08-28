@@ -1,0 +1,20 @@
+@use "../abstracts/abstracts.scss" as *;
+
+.footer {
+  background-color: $bg-light-grey;
+}
+
+.footer__wrapper {
+  display: grid;
+  justify-items: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.footer__logo {
+  display: inline-flex;
+}
+
+.footer__copyright {
+  justify-self: stretch;
+}

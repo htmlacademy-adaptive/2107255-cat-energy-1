@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Елена Ивашнева](https://up.htmlacademy.ru/adaptive-individual/1/user/2107255).
-* Наставник: [Олег Цыганов](https://htmlacademy.ru/profile/olegtsyganov).
+* Наставник: [Андрей Ефимов](https://htmlacademy.ru/profile/efiand).
 
 ---
 
