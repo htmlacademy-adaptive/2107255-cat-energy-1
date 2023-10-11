@@ -64,9 +64,9 @@
     background-color: $color-accent;
 
     @media #{$tablet-desktop} {
-      margin-top: 40px;
       width: 80px;
       height: 80px;
+      margin-top: 40px;
     }
   }
 }
