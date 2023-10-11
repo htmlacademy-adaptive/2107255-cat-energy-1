@@ -1,4 +1,4 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .control {
   display: inline-flex;
@@ -9,6 +9,6 @@
 .control__label {
   margin-top: 6px;
 
-  @include font-accent-uppercase(16px);
+  @include caps-text(16px, 18px);
   cursor: pointer;
 }

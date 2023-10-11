@@ -1,0 +1,27 @@
+@use "../abstracts/abstracts" as *;
+
+.show-more {
+  display: grid;
+  gap: 21px 0;
+  padding: 25px 0 24px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.show-more__info {
+  max-width: 230px;
+  margin: 0 auto;
+}
+
+.show-more__title {
+  margin: 0 0 8px;
+
+  @include caps-text(16px, 20px);
+  font-weight: 400;
+  color: $color-near-black;
+}
+
+.show-more__description {
+  margin: 0;
+}

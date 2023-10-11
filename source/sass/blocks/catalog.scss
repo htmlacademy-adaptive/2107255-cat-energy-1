@@ -1,13 +1,15 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .catalog {
   padding-top: 27px;
 }
 
 .catalog__title {
-  margin-bottom: 41px;
+  margin: 0 0 40px;
 }
 
 .catalog__list {
-  @include list-reset;
+  display: grid;
+
+  @include normalize-list;
 }

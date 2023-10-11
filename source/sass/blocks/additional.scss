@@ -1,11 +1,11 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .additional {
-  padding: 25px 0 35px 0;
+  padding: 25px 0 35px;
 }
 
 .additional__title {
-  margin-bottom: 36px;
+  margin: 0 0 36px;
 }
 
 .additional__wrapper {
@@ -14,62 +14,65 @@
 }
 
 .additional__list {
-  @include list-reset;
+  @include normalize-list;
 }
 
 .additional__item {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 15px;
-  padding: 13px 0 19px 0;
-  line-height: 14px;
+  gap: 13px;
+  padding: 13px 0 19px;
+  font-size: 14px;
+  line-height: 1;
 }
 
 .additional__subtitle {
-  margin: 0 0 -2px 0;
-  font-weight: 400;
+  grid-column: 1 / -1;
+  margin: 0;
 
-  @include font-accent-uppercase(16px, 16px);
-  color: $very-dark-grey;
+  @include caps-text(16px, 1);
+  font-weight: 400;
+  color: $color-light-black;
 }
 
 .additional__weight {
-  grid-column: 1 / 2;
+  margin: 0;
 }
 
 .additional__price {
+  margin: 0;
   text-align: right;
 }
 
 .additional__button {
   grid-column: 1 / -1;
+  margin-top: 2px;
 }
 
 .additional__gift {
   position: relative;
   z-index: 1;
-  padding: 59px 59px 43px 56px;
+  display: grid;
+  justify-content: center;
+  padding: 59px 44px 43px;
   text-align: center;
-  color: $white;
+  color: $color-white;
   background-image: url("../img/background/additional-gift-mobile.jpg");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     z-index: -1;
-    background-color: rgba($bg-green, 0.85);
+    background-color: $color-accent-85;
   }
 }
 
 .additional__gift-text {
+  max-width: 184px;
   margin: 0;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
 }
