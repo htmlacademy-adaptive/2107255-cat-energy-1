@@ -1,39 +1,32 @@
-@use "./variables.scss" as *;
+@use "./variables" as *;
 
-@mixin list-reset {
+@mixin caps-text($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-accent;
+  text-transform: uppercase;
+}
+
+@mixin normalize-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin normalize-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-@mixin fieldset-reset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+@mixin divider($top, $border-color) {
+  position: relative;
 
-@mixin button-normalize {
-  margin: 0;
-  padding: 0;
-  background-color: $bg-transparent;
-  border: 0;
-  cursor: pointer;
-}
-
-@mixin font-base($size, $line) {
-  font-size: $size;
-  line-height: $line;
-}
-
-@mixin font-accent-uppercase($size: 14px, $line: 18px) {
-  font-size: $size;
-  line-height: $line;
-  font-family: $font-accent;
-  text-transform: uppercase;
-}
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid $border-color;
+  }
 }

@@ -1,12 +1,26 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include normalize-link;
+  pointer-events: none;
+
+  @media #{$tablet-desktop} {
+    justify-content: flex-end;
+    gap: 23px;
+    pointer-events: all;
+  }
 }
 
 .copyright__text {
-  @include font-base(16px, 20px);
-  color: $dark-grey;
+  font-size: 16px;
+  line-height: 1.25;
+  pointer-events: all;
+}
+
+.copyright__icon {
+  pointer-events: all;
 }

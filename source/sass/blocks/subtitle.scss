@@ -1,14 +1,27 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .subtitle {
-  margin: 0;
   font-weight: 400;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
   font-family: $font-accent;
-  color: $black;
+  color: $color-black;
 
-  &--accent {
+  &--caps {
     text-transform: uppercase;
+  }
+
+  @media #{$mobile} {
+    &--line-m {
+      line-height: 26px;
+    }
+
+    &--line-l {
+      line-height: 37px;
+    }
+  }
+
+  @media #{$tablet-desktop} {
+    font-size: 36px;
   }
 }

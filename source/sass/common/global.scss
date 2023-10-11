@@ -1,3 +1,5 @@
+@use "../abstracts/abstracts" as *;
+
 *,
 *::before,
 *::after {
@@ -5,19 +7,22 @@
 }
 
 html {
-  height: 100%;
+  font-size: 14px;
+  line-height: calc(18/14);
+  font-family: $font-base;
+
+  @media #{$tablet-desktop} {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 body {
+  min-width: 320px;
   margin: 0;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
-}
-
-a {
-  text-decoration: none;
 }

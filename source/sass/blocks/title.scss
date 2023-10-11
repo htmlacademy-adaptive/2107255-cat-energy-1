@@ -1,10 +1,23 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .title {
-  margin: 0;
   font-weight: 400;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   font-family: $font-accent;
-  color: $black;
+  color: $color-black;
+
+  @media #{$mobile} {
+    &--line-l {
+      line-height: 40px;
+    }
+
+    &--light {
+      color: $color-white;
+    }
+  }
+
+  @media #{$tablet-desktop} {
+    font-size: 60px;
+  }
 }
