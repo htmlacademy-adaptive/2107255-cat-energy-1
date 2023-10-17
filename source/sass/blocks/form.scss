@@ -1,33 +1,39 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .form {
   padding: 27px 0 32px 0;
 }
 
 .form__header {
-  width: 260px;
   margin-bottom: 39px;
 }
 
 .form__title {
-  margin-bottom: 37px;
+  margin: 0 0 37px;
 }
 
 .form__description {
   margin: 0;
 
-  @include font-accent-uppercase;
-  color: $black;
+  @include accent-caps-font(14px, 18px);
+  color: $color-default-black;
 }
 
 .form__inner {
   display: grid;
-  gap: 24px;
+  gap: 23px;
   margin-bottom: 26px;
 }
 
 .form__section {
-  @include fieldset-reset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  &--program {
+    padding-top: 22px;
+    padding-bottom: 19px;
+  }
 
   &--contacts {
     margin-bottom: 24px;
@@ -43,7 +49,8 @@
 }
 
 .form__subtitle {
-  line-height: 26px;
+  max-width: calc(187 / 280 * 100%);
+  margin: 0;
 
   &--contacts {
     margin-bottom: 35px;
@@ -58,40 +65,32 @@
   }
 }
 
-.form__field-list {
+.form__list {
   display: grid;
-  gap: 14px;
 
-  @include list-reset;
+  @include reset-list;
+
+  &--fields {
+    gap: 14px;
+  }
+
+  &--radio {
+    gap: 13px;
+  }
+
+  &--checkbox {
+    gap: 12px;
+  }
 }
 
-.form__radio-list {
-  display: grid;
-  gap: 13px;
-
-  @include list-reset;
-  padding: 22px 0 19px 0;
-}
-
-.form__checkbox-list {
-  display: grid;
-  gap: 12px;
-
-  @include list-reset;
-}
-
-.form__textarea {
-  width: 100%;
-  min-height: 150px;
-}
-
-.form__bottom {
+.form__footer {
   display: grid;
   gap: 21px;
 }
 
 .form__footnote {
+  margin: 0;
   line-height: 16px;
   text-align: center;
-  color: $black;
+  color: $color-default-black;
 }

@@ -1,18 +1,15 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .page {
-  font-size: 14px;
-  line-height: 18px;
-  font-family: $font-base;
-  color: $dark-grey;
-  background-color: $white;
+  --page-bg-color: #{$color-default-white};
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100vh;
+  color: $color-base;
+  background-color: var(--page-bg-color);
 }
 
-.page__promo,
-.page__categories {
-  margin-bottom: 20px;
-}
-
-.page__features {
-  margin-bottom: 49px;
+.page__footer {
+  margin-top: auto; // подстраховка для страниц без main
 }

@@ -1,16 +1,82 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
+
+.features {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media #{$tablet-desktop} {
+    padding-top: 45px;
+    padding-bottom: 46px;
+  }
+
+  @media #{$desktop} {
+    padding-top: 71px;
+    padding-bottom: 69px;
+  }
+}
 
 .features__title {
-  margin-bottom: 40px;
+  margin: 0 0 40px;
+
+  @media #{$tablet-desktop} {
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
   display: grid;
   gap: 20px;
 
-  @include list-reset;
+  @include reset-list;
+
+  @media #{$tablet-desktop} {
+    gap: 37px 60px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{$desktop} {
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 245px);
+  }
+}
+
+.features__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  @media #{$tablet-desktop} {
+    flex-direction: column;
+    gap: 31px;
+    min-height: 280px;
+    margin-right: 70.5px;
+  }
+
+  @media #{$desktop} {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-accent;
+
+    @media #{$tablet-desktop} {
+      width: 80px;
+      height: 80px;
+      margin-top: 40px;
+    }
+  }
 }
 
 .features__description {
-  margin: 0;
+  max-width: 480px;
+  margin: 2px 0 4px;
+
+  @media #{$tablet-desktop} {
+    max-width: 100%;
+    margin: 0;
+  }
 }

@@ -1,28 +1,28 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .field {
   display: flex;
   align-items: center;
   gap: 13px;
 
-  @include font-accent-uppercase(16px);
+  @include accent-caps-font(16px, 18px);
 }
 
 .field__label {
-  transform: translateY(-1px);
   cursor: pointer;
 }
 
 .field__input {
   flex-grow: 1;
+  flex-shrink: 0;
   width: 60%;
   min-height: 45px;
-  padding: 13px 14px 12px 14px;
+  padding: 12px 14px 11px;
   font: inherit;
-  text-transform: inherit;
   color: inherit;
-  background-color: $bg-transparent;
-  border: 1px solid $border-light-grey;
+  text-transform: inherit;
+  background-color: transparent;
+  border: 1px solid $color-border-basic;
   appearance: textfield;
 
   &::placeholder {
@@ -36,7 +36,15 @@
   }
 
   &--icon {
-    padding-right: 45px;
-    border-color: $border-grey;
+    width: 65%;
+    padding-right: 44px;
+    border-color: $color-border-alter;
+  }
+
+  &--textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 13px 14px;
+    resize: none;
   }
 }

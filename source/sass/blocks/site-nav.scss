@@ -1,11 +1,53 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .site-nav {
-  @include list-reset;
-  @include font-accent-uppercase(20px, 20px);
+  padding: 0;
+  list-style: none;
+
+  @include accent-caps-font(20px, 1);
   text-align: center;
+  color: $color-default-black;
+
+  @media #{$mobile} {
+    border-bottom: $full-divider;
+  }
+
+  @media #{$tablet-desktop} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 34px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  @media #{$desktop} {
+    font-size: 20px;
+    line-height: 1.5;
+
+    &--light {
+      color: $color-default-white;
+    }
+  }
+}
+
+.site-nav__item {
+  @media #{$mobile} {
+    min-height: 66px;
+    padding: 0 20px;
+    border-top: $full-divider;
+  }
 }
 
 .site-nav__link {
-  color: $black;
+  display: flex;
+  padding: 10px 0;
+
+  @include reset-link;
+
+  @media #{$mobile} {
+    justify-content: center;
+    align-items: center;
+    min-height: 65px;
+  }
 }

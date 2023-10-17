@@ -1,22 +1,151 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
+
+.header {
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 14px;
+
+  @media #{$tablet-desktop} {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media #{$desktop} {
+    padding-top: 55px;
+    padding-bottom: 29px;
+
+    &--accent::before,
+    &--accent::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: calc(100% + 551px);
+    }
+
+    &--accent::before {
+      z-index: -1;
+      max-width: 1280px;
+      background-image: $overlay-accent, url("../img/background/promo-cat-desktop.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--accent::after {
+      z-index: -2;
+      background-color: #62a53a;
+    }
+  }
+}
 
 .header__wrapper {
-  position: relative;
-  padding-top: 13px;
+  display: grid;
+  justify-content: space-between;
+  align-items: start;
+  gap: 14px 20px;
+  grid-template-columns: 33px auto 33px;
+
+  @media #{$tablet-desktop} {
+    gap: 0 75px;
+    grid-template-columns: 174px 1fr;
+  }
+
+  @media #{$desktop} {
+    gap: 0 100px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .header__logo {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 13px;
+  display: flex;
+
+  @media #{$desktop} {
+    width: 202px;
+  }
 }
 
-.header__logo-text {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.header__logo-name {
+  @media #{$mobile} {
+    display: flex;
+    width: 111px;
+    padding: 11px 5px 9px;
+  }
+
+  @media #{$tablet-desktop} {
+    display: none;
+  }
 }
 
 .header__toggle {
-  @include button-normalize;
+  @media #{$mobile} {
+    justify-self: end;
+    width: 24px;
+    height: 26px;
+    margin-top: 6px;
+    padding: 4px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0;
+    cursor: pointer;
+  }
+
+  @media #{$tablet-desktop} {
+    display: none;
+  }
+}
+
+.header__main-nav {
+  @media #{$mobile} {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    z-index: 10;
+    display: none;
+    width: 100%;
+    padding-top: 2px;
+    background-color: var(--page-bg-color);
+  }
+
+  @media #{$tablet-desktop} {
+    justify-self: end;
+    max-width: 442px;
+    margin: 4px 4px 2px 0;
+  }
+
+  @media #{$desktop} {
+    max-width: 480px;
+    margin: 6px 1px 3px 0;
+  }
+
+  ul {
+    margin: 0;
+  }
+}
+
+// Мобильное меню
+
+@media #{$mobile} {
+  .header--opened {
+    .header__main-nav {
+      display: block;
+    }
+  }
+
+  .header--no-js {
+    padding-bottom: 0;
+
+    .header__toggle {
+      display: none;
+    }
+
+    .header__main-nav {
+      position: relative;
+      top: 0;
+      left: -20px;
+      display: block;
+      grid-column: 1 / -1;
+      width: calc(100% + 40px);
+      padding-top: 0;
+    }
+  }
 }

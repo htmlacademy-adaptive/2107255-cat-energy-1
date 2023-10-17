@@ -1,20 +1,64 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .footer {
-  background-color: $bg-light-grey;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $color-bg-basic;
+
+  @media #{$tablet-desktop} {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @media #{$desktop} {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
 }
 
 .footer__wrapper {
   display: grid;
-  justify-items: center;
   gap: 40px;
-  padding: 40px 0;
+
+  @media #{$tablet-desktop} {
+    align-items: start;
+    gap: 80px;
+    grid-template-columns: 168px 1fr 168px;
+  }
+
+  @media #{$desktop} {
+    gap: 160px;
+  }
+}
+
+.footer__item {
+  @media #{$mobile} {
+    @include divider(-21px, $color-divider);
+  }
 }
 
 .footer__logo {
-  display: inline-flex;
+  display: flex;
+  justify-self: center;
+
+  @media #{$tablet-desktop} {
+    justify-self: start;
+    margin: 6.5px 0;
+  }
+}
+
+.footer__social {
+  margin: 0;
+
+  @media #{$tablet-desktop} {
+    margin: 8px 0 7px;
+  }
 }
 
 .footer__copyright {
-  justify-self: stretch;
+  @media #{$tablet-desktop} {
+    align-self: end;
+    justify-self: end;
+    min-height: 37px;
+  }
 }

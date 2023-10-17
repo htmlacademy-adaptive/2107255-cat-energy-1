@@ -1,50 +1,31 @@
-// ------- Common -------
-@use "./common/fonts.scss";
-@use "./common/global.scss";
-@use "./common/visually-hidden.scss";
-@use "./common/container.scss";
+// ----- Common -----
+@use "./common/fonts";
+@use "./common/global";
+@use "./common/visually-hidden";
+@use "./common/container";
 
-// ------- Blocks -------
-@use "./blocks/page.scss";
-@use "./blocks/title.scss";
-@use "./blocks/subtitle.scss";
-@use "./blocks/button.scss";
-
-// ----- Header -----
-@use "./blocks/header.scss";
-@use "./blocks/site-nav.scss";
-
-// ----- Main -----
-// Location
-@use "./blocks/location.scss";
-@use "./blocks/contacts.scss";
-@use "./blocks/map.scss";
-
-// --- Index ---
-// Promo
-@use "./blocks/promo.scss";
-// Categories
-@use "./blocks/categories.scss";
-// Features
-@use "./blocks/features.scss";
-// Example
-@use "./blocks/example.scss";
-@use "./blocks/slider.scss";
-
-// --- Catalog ---
-// Catalog
-@use "./blocks/catalog.scss";
-@use "./blocks/card.scss";
-// Additional
-@use "./blocks/additional.scss";
-
-// --- Form ---
-@use "./blocks/form.scss";
-@use "./blocks/field.scss";
-@use "./blocks/textarea.scss";
-@use "./blocks/control.scss";
-
-// ----- Footer -----
-@use "./blocks/footer.scss";
-@use "./blocks/social.scss";
-@use "./blocks/copyright.scss";
+// ----- Blocks -----
+@use "./blocks/additional";
+@use "./blocks/button";
+@use "./blocks/card";
+@use "./blocks/case";
+@use "./blocks/catalog";
+@use "./blocks/categories";
+@use "./blocks/comparator";
+@use "./blocks/contacts";
+@use "./blocks/control";
+@use "./blocks/copyright";
+@use "./blocks/features";
+@use "./blocks/field";
+@use "./blocks/footer";
+@use "./blocks/form";
+@use "./blocks/header";
+@use "./blocks/location";
+@use "./blocks/map";
+@use "./blocks/page";
+@use "./blocks/promo";
+@use "./blocks/show-more";
+@use "./blocks/site-nav";
+@use "./blocks/social";
+@use "./blocks/subtitle";
+@use "./blocks/title";

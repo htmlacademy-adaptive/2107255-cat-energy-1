@@ -1,22 +1,28 @@
-@use "../abstracts/abstracts.scss" as *;
+@use "../abstracts/abstracts" as *;
 
 .button {
   display: flex;
   justify-content: center;
   padding: 10px 20px;
 
-  @include font-accent-uppercase(16px, 20px);
+  @include accent-caps-font(16px, 1.25);
   text-align: center;
+
+  @include reset-link;
+  overflow-wrap: anywhere;
+
+  background-color: $color-bg-basic;
   border: 0;
   cursor: pointer;
 
   &--primary {
-    color: $white;
-    background-color: $bg-green;
+    color: $color-default-white;
+    background-color: $color-accent;
   }
 
-  &--secondary {
-    color: $dark-grey;
-    background-color: $bg-light-grey;
+  @media #{$tablet-desktop} {
+    padding: 14px 27px;
+    font-size: 20px;
+    line-height: 1.3;
   }
 }
