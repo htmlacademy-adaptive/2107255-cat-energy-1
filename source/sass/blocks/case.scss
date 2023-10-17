@@ -1,31 +1,35 @@
 @use "../abstracts/abstracts" as *;
 
 .case {
+  --block-bg-color: #{$color-bg-alter};
+
   padding-top: 25px;
   padding-bottom: 40px;
-  background: $bg-color-alter;
+  background: var(--block-bg-color);
 
   @media #{$tablet-desktop} {
     padding-top: 45px;
     padding-bottom: 101px;
-    background: linear-gradient(to top, $bg-color-alter 462px, $color-white 462px);
+    background: linear-gradient(to top, var(--block-bg-color) 462px, transparent 462px);
     border-top: $full-divider;
   }
 
   @media #{$desktop} {
+    --block-bg-color: #{$color-bg-basic};
+
     padding-top: 0;
     padding-bottom: 75px;
-    background: linear-gradient($color-white 136px, $bg-color-basic 136px);
+    background: linear-gradient(transparent 136px, var(--block-bg-color) 136px);
     border-top: 0;
   }
 }
 
 .case__wrapper {
   display: grid;
-  row-gap: 20px;
+  gap: 20px;
 
   @media #{$tablet-desktop} {
-    row-gap: 85px;
+    gap: 85px;
   }
 
   @media #{$desktop} {
@@ -48,25 +52,29 @@
 }
 
 .case__description {
-  margin: 0 0 12px;
+  margin-bottom: 20px;
 
   @media #{$tablet-desktop} {
-    margin-bottom: 20px;
+    margin-bottom: 55px;
   }
 
   @media #{$desktop} {
-    margin-bottom: 24px;
+    margin-bottom: 69px;
   }
 
-  &:last-of-type {
-    margin-bottom: 20px;
+  p {
+    margin: 0;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 12px;
 
     @media #{$tablet-desktop} {
-      margin-bottom: 55px;
+      margin-bottom: 20px;
     }
 
     @media #{$desktop} {
-      margin-bottom: 69px;
+      margin-bottom: 24px;
     }
   }
 }
@@ -74,14 +82,14 @@
 .case__result {
   display: grid;
   gap: 19px;
-  max-width: 436px;
+  max-width: 436px; // 3 ячейки в ряду
   margin: 0 auto;
   text-align: center;
 
   @media #{$tablet-desktop} {
     align-items: start;
-    gap: 160px;
-    grid-template-columns: auto minmax(182px, 1fr);
+    gap: 143px;
+    grid-template-columns: auto minmax(182px, 0.92fr);
     max-width: 100%;
     margin: 0;
   }
@@ -100,15 +108,14 @@
   margin: 0;
 
   @media #{$tablet-desktop} {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: start;
     gap: 23px 42px;
-    max-width: 373px;
+    grid-template-columns: repeat(auto-fit, 162px);
+    max-width: 366px; // 2 ячейки в ряду
   }
 
   @media (min-width: 972px) {
-    max-width: 577px;
+    max-width: 570px; // 3 ячейки в ряду
   }
 
   @media #{$desktop} {
@@ -119,39 +126,35 @@
 .case__param-item {
   display: flex;
   flex-direction: column;
-  width: 124px;
   min-height: 71px;
 
   @media #{$tablet-desktop} {
-    flex-shrink: 0;
-    width: 162px;
     min-height: 91px;
   }
 }
 
 .case__param-name {
   align-self: center;
-  width: min-content;
-  min-width: 87px;
-  max-width: 104px;
-  min-height: 24px;
-  margin-top: -9px;
-  padding: 0 8px;
+  min-height: 24px; // высота под 2 строки текста
+  margin: -9px 10px 0;
+  padding: 0 15.5px;
   font-size: 12px;
   line-height: 1;
-  background-color: $bg-color-alter;
+  background-color: var(--block-bg-color);
 
   @media #{$tablet-desktop} {
-    width: auto;
-    min-width: 114px;
-    max-width: 142px;
     min-height: 28px;
+    padding: 0 8.5px;
     font-size: 14px;
-    background-color: $color-white;
+    background-color: var(--page-bg-color);
+
+    br {
+      display: none;
+    }
   }
 
   @media #{$desktop} {
-    background-color: $bg-color-basic;
+    background-color: var(--block-bg-color);
   }
 }
 
@@ -164,23 +167,23 @@
   margin: 0;
   padding: 14px 5px 16px;
 
-  @include caps-text(24px, 1);
-  color: $color-black;
-  border: 1px solid $border-color-alter;
+  @include accent-caps-font(24px, 1);
+  color: $color-default-black;
+  border: 1px solid $color-border-alter;
   border-radius: 3px;
 
   @media #{$tablet-desktop} {
-    padding: 14px 8px 19px;
+    padding-bottom: 19px;
     font-size: 30px;
     line-height: 37px;
   }
 }
 
-.case__total {
+.case__special-param {
   margin: 0;
 
-  @include caps-text(14px, 20px);
-  color: $color-black;
+  @include accent-caps-font(14px, 20px);
+  color: $color-default-black;
 
   @media #{$tablet-desktop} {
     display: flex;

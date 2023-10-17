@@ -9,6 +9,6 @@
 .control__label {
   margin-top: 6px;
 
-  @include caps-text(16px, 18px);
+  @include accent-caps-font(16px, 18px);
   cursor: pointer;
 }

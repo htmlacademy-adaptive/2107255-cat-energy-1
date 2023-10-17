@@ -5,15 +5,11 @@
   font-size: 36px;
   line-height: 1;
   font-family: $font-accent;
-  color: $color-black;
+  color: $color-default-black;
 
   @media #{$mobile} {
     &--line-l {
       line-height: 40px;
-    }
-
-    &--light {
-      color: $color-white;
     }
   }
 

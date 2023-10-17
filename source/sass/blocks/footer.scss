@@ -3,7 +3,7 @@
 .footer {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: $bg-color-basic;
+  background-color: $color-bg-basic;
 
   @media #{$tablet-desktop} {
     padding-top: 55px;
@@ -22,14 +22,18 @@
 
   @media #{$tablet-desktop} {
     align-items: start;
-    gap: 94px;
+    gap: 80px;
     grid-template-columns: 168px 1fr 168px;
+  }
+
+  @media #{$desktop} {
+    gap: 160px;
   }
 }
 
 .footer__item {
   @media #{$mobile} {
-    @include divider(-21px, $divider-color);
+    @include divider(-21px, $color-divider);
   }
 }
 
@@ -39,7 +43,7 @@
 
   @media #{$tablet-desktop} {
     justify-self: start;
-    margin: 6.5px 0 6.5px;
+    margin: 6.5px 0;
   }
 }
 
@@ -55,6 +59,6 @@
   @media #{$tablet-desktop} {
     align-self: end;
     justify-self: end;
-    height: 37px;
+    min-height: 37px;
   }
 }

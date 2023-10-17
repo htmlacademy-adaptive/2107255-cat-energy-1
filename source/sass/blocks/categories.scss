@@ -4,7 +4,7 @@
   display: grid;
   gap: 20px;
 
-  @include normalize-list;
+  @include reset-list;
 
   @media #{$tablet-desktop} {
     gap: 30px;
@@ -13,15 +13,15 @@
   @media #{$desktop} {
     justify-content: space-between;
     gap: 40px;
-    grid-template-columns: repeat(2, 570px);
+    grid-template-columns: repeat(2, minmax(calc(50% - 40px), 570px));
   }
 }
 
 .categories__item {
   position: relative;
   padding: 24px 20px 0;
-  color: $color-black;
-  background-color: $bg-color-basic;
+  color: $color-default-black;
+  background-color: $color-bg-basic;
 
   @media #{$tablet-desktop} {
     min-height: 344px;
@@ -39,16 +39,12 @@
 .categories__image-wrapper {
   position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
-
-  &::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: $color-accent;
-    border-radius: 50%;
-  }
+  background-color: $color-accent;
+  border-radius: 50%;
 
   @media #{$tablet-desktop} {
     top: 91px;
@@ -85,21 +81,25 @@
 }
 
 .categories__description {
-  margin: 0 0 16px;
+  margin-bottom: 22px;
 
   @media #{$tablet-desktop} {
-    margin-bottom: 18px;
+    margin-bottom: 48px;
   }
 
-  &:last-of-type {
-    margin-bottom: 22px;
+  @media #{$desktop} {
+    margin-bottom: 23px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 16px;
 
     @media #{$tablet-desktop} {
-      margin-bottom: 48px;
-    }
-
-    @media #{$desktop} {
-      margin-bottom: 23px;
+      margin-bottom: 18px;
     }
   }
 
@@ -126,8 +126,8 @@
   display: inline-flex;
   padding: 4px 0;
 
-  @include caps-text(16px, 1);
-  @include normalize-link;
+  @include accent-caps-font(16px, 1);
+  @include reset-link;
 
   @media #{$tablet-desktop} {
     font-size: 20px;

@@ -1,18 +1,18 @@
 @use "./variables" as *;
 
-@mixin caps-text($font-size, $line-height) {
+@mixin accent-caps-font($font-size, $line-height) {
   font-size: $font-size;
   line-height: $line-height;
   font-family: $font-accent;
   text-transform: uppercase;
 }
 
-@mixin normalize-link {
+@mixin reset-link {
   color: inherit;
   text-decoration: none;
 }
 
-@mixin normalize-list {
+@mixin reset-list {
   margin: 0;
   padding: 0;
   list-style: none;

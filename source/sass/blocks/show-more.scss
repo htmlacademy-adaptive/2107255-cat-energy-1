@@ -17,9 +17,9 @@
 .show-more__title {
   margin: 0 0 8px;
 
-  @include caps-text(16px, 20px);
+  @include accent-caps-font(16px, 20px);
   font-weight: 400;
-  color: $color-near-black;
+  color: $color-black;
 }
 
 .show-more__description {

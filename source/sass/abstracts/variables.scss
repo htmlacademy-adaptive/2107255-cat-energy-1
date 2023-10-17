@@ -3,30 +3,28 @@ $font-base: "Lato", "Arial", sans-serif;
 $font-accent: "Oswald", "Arial Narrow", sans-serif;
 
 // Colors
-$color-white: #ffffff;
+$color-default-white: #ffffff;
 $color-base: #444444;
-$color-light-black: #222222;
-$color-near-black: #111111;
-$color-black: #000000;
-$bg-color-basic: #f2f2f2;
-$bg-color-alter: #eaeaea;
-$border-color-basic: #e7e7e7;
-$border-color-alter: #cdcdcd;
-$full-divider-color: #e6e6e6;
-$divider-color: #d9d9d9;
+$color-nero: #222222;
+$color-black: #111111;
+$color-default-black: #000000;
+$color-bg-basic: #f2f2f2;
+$color-bg-alter: #eaeaea;
+$color-border-basic: #e7e7e7;
+$color-border-alter: #cdcdcd;
+$color-full-divider: #e6e6e6;
+$color-divider: #d9d9d9;
 $color-accent: #68b738;
 $color-accent-85: rgba($color-accent, 0.85);
 
 // Other
-$full-divider: 1px solid $full-divider-color;
-$divider: 1px solid $divider-color;
+$full-divider: 1px solid $color-full-divider;
+$divider: 1px solid $color-divider;
 $overlay-accent: linear-gradient($color-accent-85, $color-accent-85);
 
 // Viewports
-$tablet-narrow-width: 640px;
 $tablet-width: 768px;
 $desktop-width: 1240px;
 $mobile: "(max-width: #{$tablet-width - 0.02})";
-$tablet-narrow-desktop: "(min-width: #{$tablet-narrow-width})";
 $tablet-desktop: "(min-width: #{$tablet-width})";
 $desktop: "(min-width: #{$desktop-width})";

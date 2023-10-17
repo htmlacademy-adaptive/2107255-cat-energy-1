@@ -14,7 +14,7 @@
 }
 
 .additional__list {
-  @include normalize-list;
+  @include reset-list;
 }
 
 .additional__item {
@@ -30,9 +30,9 @@
   grid-column: 1 / -1;
   margin: 0;
 
-  @include caps-text(16px, 1);
+  @include accent-caps-font(16px, 1);
   font-weight: 400;
-  color: $color-light-black;
+  color: $color-nero;
 }
 
 .additional__weight {
@@ -56,7 +56,7 @@
   justify-content: center;
   padding: 59px 44px 43px;
   text-align: center;
-  color: $color-white;
+  color: $color-default-white;
   background-image: url("../img/background/additional-gift-mobile.jpg");
   background-position: center;
   background-size: cover;

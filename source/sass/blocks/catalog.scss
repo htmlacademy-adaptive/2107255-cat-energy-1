@@ -11,5 +11,5 @@
 .catalog__list {
   display: grid;
 
-  @include normalize-list;
+  @include reset-list;
 }

@@ -5,17 +5,18 @@
   justify-content: center;
   padding: 10px 20px;
 
-  @include caps-text(16px, 1.25);
+  @include accent-caps-font(16px, 1.25);
   text-align: center;
 
-  @include normalize-link;
+  @include reset-link;
   overflow-wrap: anywhere;
-  background-color: $bg-color-basic;
+
+  background-color: $color-bg-basic;
   border: 0;
   cursor: pointer;
 
   &--primary {
-    color: $color-white;
+    color: $color-default-white;
     background-color: $color-accent;
   }
 

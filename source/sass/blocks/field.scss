@@ -5,7 +5,7 @@
   align-items: center;
   gap: 13px;
 
-  @include caps-text(16px, 18px);
+  @include accent-caps-font(16px, 18px);
 }
 
 .field__label {
@@ -22,7 +22,7 @@
   color: inherit;
   text-transform: inherit;
   background-color: transparent;
-  border: 1px solid $border-color-basic;
+  border: 1px solid $color-border-basic;
   appearance: textfield;
 
   &::placeholder {
@@ -38,7 +38,7 @@
   &--icon {
     width: 65%;
     padding-right: 44px;
-    border-color: $border-color-alter;
+    border-color: $color-border-alter;
   }
 
   &--textarea {

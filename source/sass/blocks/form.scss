@@ -15,8 +15,8 @@
 .form__description {
   margin: 0;
 
-  @include caps-text(14px, 18px);
-  color: $color-black;
+  @include accent-caps-font(14px, 18px);
+  color: $color-default-black;
 }
 
 .form__inner {
@@ -68,7 +68,7 @@
 .form__list {
   display: grid;
 
-  @include normalize-list;
+  @include reset-list;
 
   &--fields {
     gap: 14px;
@@ -92,5 +92,5 @@
   margin: 0;
   line-height: 16px;
   text-align: center;
-  color: $color-black;
+  color: $color-default-black;
 }
